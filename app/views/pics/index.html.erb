@@ -1,1 +1,4 @@
-<h1>Placeholder</h1>
+<% @pics.each do |pic| %>
+  <h2><%= link_to pic.title, pic %></h2>
+  <p><%= pic.description %></p>
+<% end %>

@@ -2,7 +2,7 @@
  <% if @pic.errors.any? %>
  <h2><%= pluralize(@pic.errors.count, "error") %></h2>
  <ul>
-   <%= @pic.errors.full_message.each do |msg| %>
+   <%= @pic.errors.full_messages.each do |msg| %>
    <li><%= msg %></li>
    <% end %>
  </ul>
