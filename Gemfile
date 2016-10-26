@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # New gems
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'purecss-rails'
+gem 'devise'
 
 
 group :development, :test do

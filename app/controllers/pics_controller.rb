@@ -1,4 +1,5 @@
 class PicsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
   before_action :set_picture
 
   def index
@@ -6,14 +7,14 @@ class PicsController < ApplicationController
   end
 
   def new
-    @pic = Pic.new
+    @pic = current_user.pics.build
   end
 
   def show
   end
 
   def create
-    @pic = Pic.new(pic_params)
+    @pic = current_user.pics.build(pic_params)
 
     if @pic.save
       redirect_to @pic, notice: "Yay! Uploaded success!"
@@ -31,6 +32,10 @@ class PicsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    redirect_to root_url
   end
 
   private
