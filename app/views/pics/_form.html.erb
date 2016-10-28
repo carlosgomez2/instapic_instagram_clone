@@ -12,7 +12,10 @@
     <div class="pure-form">
       <div class="pure-group">
         <%= f.input :title, input_html: { class: 'pure-input-1 custom-form' } %>
-        <%= f.input :description, input_html: { class: 'pure-input-1' }, placeholder: "Add a description." %>
+        <%= f.input :description, input_html: { class: 'pure-input-1 custom-form' }, placeholder: "Add a description." %>
+      </div>
+      <div class="pure-group">
+        <%= f.input :image, input_html: { class: 'pure-input-1' } %>
       </div>
       <%= f.button :submit, class: "pure-button pure-input-1-2 pure-button-primary custom-btn" %>
     </div>

@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'purecss-rails'
 gem 'devise'
+gem "paperclip", "~> 5.0.0"
 
 
 group :development, :test do
