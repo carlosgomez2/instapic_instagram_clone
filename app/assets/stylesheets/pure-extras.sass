@@ -1,3 +1,7 @@
+// Variables
+$gray: #eeefef
+$bg_color: #FAFAFA
+
 .pure-alert
   position: relative
   margin-bottom: 1em
@@ -22,11 +26,18 @@
 
 // Customization of pure
 
+.pure-menu
+  background-color: white
+
 .pure-menu-horizontal
+  border-bottom: 1px solid #DBDBDB
+  // flex
   display: flex
   flex-direction: row
   flex-wrap: wrap
   justify-content: space-around
+
+  padding: 15px 40px
 
 .pure-menu-heading
   font-size: 1.3em
@@ -34,6 +45,9 @@
 .pure-menu-link
   font-size: 1.3em
   text-transform: uppercase
+
+body
+  background-color: $bg_color
 
 .main-wrapper
   width: 100%
@@ -59,22 +73,62 @@
 .custom-form
   margin-bottom: 0.5rem !important
 
+.pic-box-center
+  margin-left: auto
+  margin-right: auto
+  padding-left: 1em
+  padding-right: 1em
+  max-width: 933px
+
+.pic-box
+  max-width: 933px
+  height: 600px
+  margin-top: 60px
+  background-color: white
+  border: 1px solid $gray
+  border-bottom-right-radius: 3px
+  border-top-right-radius: 3px
+
 .main-wrapper-pic
-  width: 100%
-  max-width: 768px
+  width: 933px
 
   display: flex
   flex-direction: row
 
-  img
-    width: 100%
+  .pic
+    max-width: 100%
+    max-height: 100%
 
-  .fifty
-    width: 50%
+  .pic-left
+    max-width: 600px
 
-    .pic-title
-      font-size: 1.1em
-      font-weight: bold
+  .pic-right
+    width: 40%
+
+  .desc-wrapper
+    max-width: 290px
+    margin-left: 24px
+    margin-right: 24px
+
+    // flex
+    display: flex
+    flex-direction: column
+
+  .pic-title
+    font-size: 1.1em
+    font-weight: bold
+    border-bottom: 1px solid $gray
+    padding: 20px 0
+
+  .pic-description
+    height: 400px
+
+  .pic-btn
+    padding: 20px 24px
+
+  .pic-btn-item
+    align-self: flex-end
+    flex-shrink: 1
 
 // Media querys
 @media (max-width: 842px)
