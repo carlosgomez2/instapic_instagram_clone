@@ -1,12 +1,23 @@
-<h1><%= @pic.title %></h1>
-<p>
-  <%= @pic.description %>
-</p>
-<p>
-  Pic by
-  <%= @pic.user.email %>
-</p>
+<div class="pure-center">
+  <h1><%= @pic.title %></h1>
+</div>
+
+<div class="pure-center">
+  <div class="main-wrapper-pic">
+    <div class="fifty">
+      <img src="" alt="" />
+    </div>
+    <div class="fifty">
+      <p class="pic-title"><%= @pic.description %></p>
+      <p class="pic-description"><%= @pic.user.email %></p>
+    </div>
+  </div>
+</div>
+
 <br />
-<%= link_to "Back", root_path %>
-<%= link_to "Edit", edit_pic_path %>
-<%= link_to "Delete", pic_path, method: :delete, data: { confirm: "Are you sure?" } %>
+
+<div class="pure-center">
+  <%= link_to "Back", root_path %>
+  <%= link_to "Edit", edit_pic_path %>
+  <%= link_to "Delete", pic_path, method: :delete, data: { confirm: "Are you sure?" } %>
+</div>

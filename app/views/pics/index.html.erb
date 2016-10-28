@@ -1,6 +1,6 @@
-<% @pics.each do |pic| %>
-  <h2><%= link_to pic.title, pic %></h2>
-  <p><%= pic.description %></p>
-<% end %>
-
-<%= link_to "Create new Pic", new_pic_path %>
+<div class="pure-center">
+  <% @pics.each do |pic| %>
+    <h2><%= link_to pic.title, pic %></h2>
+    <p><%= pic.description %></p>
+  <% end %>
+</div>

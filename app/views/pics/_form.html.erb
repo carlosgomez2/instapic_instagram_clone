@@ -1,18 +1,21 @@
-<%= simple_form_for @pic, html: {multipart: true} do |f| %>
- <% if @pic.errors.any? %>
- <h2><%= pluralize(@pic.errors.count, "error") %></h2>
- <ul>
-   <%= @pic.errors.full_messages.each do |msg| %>
-   <li><%= msg %></li>
+<div class="pure-center">
+  <%= simple_form_for @pic, html: {multipart: true} do |f| %>
+   <% if @pic.errors.any? %>
+   <h2><%= pluralize(@pic.errors.count, "error") %></h2>
+   <ul>
+     <% @pic.errors.full_messages.each do |msg| %>
+     <li class="pure-alert pure-alert-error"><%= msg  %></li>
+     <% end %>
+   </ul>
    <% end %>
- </ul>
- <% end %>
 
-  <div class="pure-form pure-form-stacked">
-    <%= f.input :title, input_html: {class: 'pure-control-group'} %>
-  </div>
-  <div class="pure-form pure-form-stacked">
-    <%= f.input :description, input_html: {class: 'pure-control-group'} %>
-  </div>
-  <%= f.button :submit, class: "pure-button pure-button-primary" %>
-<% end %>
+    <div class="pure-form">
+      <div class="pure-group">
+        <%= f.input :title, input_html: { class: 'pure-input-1 custom-form' } %>
+        <%= f.input :description, input_html: { class: 'pure-input-1' }, placeholder: "Add a description." %>
+      </div>
+      <%= f.button :submit, class: "pure-button pure-input-1-2 pure-button-primary custom-btn" %>
+    </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,84 @@
+.pure-alert
+  position: relative
+  margin-bottom: 1em
+  padding: 1em
+  background: #ccc
+  border-radius: 3px
+
+  background-color: rgb(209, 235, 238)
+  color: rgb(102, 131, 145)
+
+.pure-alert-error
+  background-color: #D13C38
+  color: #fff
+
+.pure-alert-warning
+  background-color: rgb(250, 191, 103)
+  color: rgb(151, 96, 13)
+
+.pure-alert-success
+  background-color: rgb(83, 180, 79)
+  color: #fff
+
+// Customization of pure
+
+.pure-menu-horizontal
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-around
+
+.pure-menu-heading
+  font-size: 1.3em
+
+.pure-menu-link
+  font-size: 1.3em
+  text-transform: uppercase
+
+.main-wrapper
+  width: 100%
+
+.content
+  width: 95%
+  max-width: 1000px
+  margin: 0 auto
+
+.pure-center
+  margin-left: auto
+  margin-right: auto
+  padding-left: 1em
+  padding-right: 1em
+  max-width: 768px
+
+.custom-btn
+  margin-top: 0.5rem
+  margin-bottom: 0.5rem
+  width: 100% !important
+  height: 2.8em
+
+.custom-form
+  margin-bottom: 0.5rem !important
+
+.main-wrapper-pic
+  width: 100%
+  max-width: 768px
+
+  display: flex
+  flex-direction: row
+
+  img
+    width: 100%
+
+  .fifty
+    width: 50%
+
+    .pic-title
+      font-size: 1.1em
+      font-weight: bold
+
+// Media querys
+@media (max-width: 842px)
+  .main-wrapper-pic
+    flex-direction: column
+    .fifty
+      width: 100%
