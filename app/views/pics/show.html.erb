@@ -1,11 +1,9 @@
 <div class="pic-box-center">
 
-  <!-- <h2><%# @pic.title %></h2> -->
-
   <div class="pic-box">
     <div class="main-wrapper-pic">
       <div class="pic-left">
-        <%= image_tag @pic.image.url, class: "pic" %>
+        <%= image_tag @pic.image.url(:medium), class: "pic" %>
       </div>
       <div class="pic-right">
         <div class="desc-wrapper">

@@ -1,7 +1,7 @@
 class Pic < ActiveRecord::Base
   belongs_to :user
 
-  has_attached_file :image, styles: { medium: "300x300>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :image, styles: { medium: "600x600#" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
 end
