@@ -29,7 +29,8 @@
 
   <div class="main-wrapper">
     <div class="content">
-      <div class="alert">
+
+      <div id="alert-wrapper">
         <% flash.each do |name, msg| %>
           <%= content_tag :div, msg, class: "pure-alert" %>
         <% end %>
