@@ -7,8 +7,9 @@
       </div>
       <div class="pic-right">
         <div class="desc-wrapper">
-          <p class="pic-title"><%= @pic.description %></p>
-          <p class="pic-description"><%= @pic.user.email %></p>
+          <p class="pic-title"><%= @pic.title %></p>
+          <p class="pic-by">by <%= @pic.user.email %></p>
+          <p class="pic-description"><%= @pic.description %></p>
         </div>
         <div class="pic-btn">
           <%= link_to "Back", root_path, class: "pic-btn-item" %>
