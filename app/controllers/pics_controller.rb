@@ -1,6 +1,6 @@
 class PicsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
-  before_action :set_picture
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_picture, only: [:show, :edit, :update, :destroy, :upvote]
 
   def index
     @pics = Pic.all.order("created_at DESC")
@@ -17,7 +17,7 @@ class PicsController < ApplicationController
     @pic = current_user.pics.build(pic_params)
 
     if @pic.save
-      redirect_to @pic, notice: "Yay! Uploaded success!"
+      redirect_to @pic, notice: "Yay! Pic upload success!"
     else
       render 'new'
     end
@@ -35,7 +35,13 @@ class PicsController < ApplicationController
   end
 
   def destroy
+    @pic.destroy
     redirect_to root_url
+  end
+
+  def upvote
+    @pic.upvote_by current_user
+    redirect_to :back
   end
 
   private

@@ -11,12 +11,16 @@
           <p class="pic-by">by <%= @pic.user.email %></p>
           <p class="pic-description"><%= @pic.description %></p>
         </div>
-        <% if user_signed_in? %>
-          <div class="pic-btn">
-            <%= link_to "Edit", edit_pic_path, class: "pic-btn-item pure-button" %>
-            <%= link_to "Delete", pic_path, method: :delete, data: { confirm: "Are you sure?" }, class: "pic-btn-item pure-button" %>
-          </div>
-        <% end %>
+        <div class="pic-btn">
+          <%= link_to like_pic_path(@pic), method: :put, class: "pic-btn-item pure-button pure-button-success" do %>
+            <span>like</span>
+            <%= @pic.get_upvotes.size %>
+          <% end %>
+          <% if user_signed_in? %>
+            <%= link_to "Edit", edit_pic_path, class: "pic-btn-item pure-button pure-button-warning" %>
+            <%= link_to "Delete", pic_path, method: :delete, data: { confirm: "Are you sure?" }, class: "pic-btn-item pure-button pure-button-error" %>
+          <% end %>
+        </div>
       </div>
     </div>
 
