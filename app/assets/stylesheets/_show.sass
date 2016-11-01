@@ -51,20 +51,28 @@
 
   .pic-by
     margin: 0
-    padding-top: 0.5rem
+    padding-top: 20px
+    padding-bottom: 20px
 
   .pic-description
-    height: 400px
-    margin-bottom: 0
+    height: 401px
+    margin: 0 0 20px 0
 
   .pic-btn
+    margin-top: 8px
     padding: 0 0 0 24px
     width: 290px
-    float: right
+    // flex parent
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-end
+    align-items: stretch
 
   .pic-btn-item
-    align-self: flex-end
-    flex-shrink: 1
+    margin-right: 5px
+    &:last-child
+      margin-right: 0
 
 // Media querys
 @media (max-width: 842px)
