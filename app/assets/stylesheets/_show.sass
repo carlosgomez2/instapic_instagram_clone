@@ -1,0 +1,74 @@
+@import "colors"
+
+.pic-box-center
+  margin-left: auto
+  margin-right: auto
+  padding-left: 1em
+  padding-right: 1em
+  max-width: 933px
+
+.pic-box
+  max-width: 933px
+  height: 600px
+  margin-top: 60px
+  background-color: white
+  border: 1px solid $gray
+  border-bottom-right-radius: 3px
+  border-top-right-radius: 3px
+
+.main-wrapper-pic
+  width: 933px
+
+  display: flex
+  flex-direction: row
+
+  .pic
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+  .pic-left
+    max-width: 600px
+
+  .pic-right
+    // width: 40%
+
+  .desc-wrapper
+    max-width: 290px
+    margin-left: 24px
+    margin-right: 24px
+
+    // flex
+    display: flex
+    flex-direction: column
+
+  .pic-title
+    font-size: 1.1em
+    font-weight: bold
+    border-bottom: 1px solid $gray
+    padding: 20px 0
+    margin: 0
+
+  .pic-by
+    margin: 0
+    padding-top: 0.5rem
+
+  .pic-description
+    height: 400px
+    margin-bottom: 0
+
+  .pic-btn
+    padding: 0 0 0 24px
+    width: 290px
+    float: right
+
+  .pic-btn-item
+    align-self: flex-end
+    flex-shrink: 1
+
+// Media querys
+@media (max-width: 842px)
+  .main-wrapper-pic
+    flex-direction: column
+    .fifty
+      width: 100%
