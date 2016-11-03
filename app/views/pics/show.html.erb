@@ -1,11 +1,11 @@
 <div class="pic-box-center">
 
-  <div class="pic-box">
-    <div class="main-wrapper-pic">
+  <div class="box">
+    <div class="pic-box">
       <div class="pic-left">
         <%= image_tag @pic.image.url(:medium), class: "pic" %>
       </div>
-      <div class="pic-right">
+      <div class="pic-rigth">
         <div class="desc-wrapper">
           <p class="pic-title"><%= @pic.title %></p>
           <p class="pic-by">by <%= @pic.user.email %></p>
@@ -23,7 +23,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
 </div>

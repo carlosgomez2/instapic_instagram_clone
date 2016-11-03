@@ -3,9 +3,10 @@
 .pic-box-center
   margin-left: auto
   margin-right: auto
-  padding-left: 1em
-  padding-right: 1em
-  max-width: 933px
+  width: 933px
+  // padding-left: 1em
+  // padding-right: 1em
+  // max-width: 933px
 
 .pic-box
   max-width: 933px
@@ -15,9 +16,6 @@
   border: 1px solid $gray
   border-bottom-right-radius: 3px
   border-top-right-radius: 3px
-
-.main-wrapper-pic
-  width: 933px
 
   display: flex
   flex-direction: row
@@ -75,6 +73,34 @@
       margin-right: 0
 
 // Media querys
+@media (max-width: 934px)
+  .pic-box-center
+    width: 600px
+
+  .box
+    margin-top: 60px
+
+  .pic-box
+    max-width: 600px
+    margin: 0 auto
+    flex-direction: column
+
+    .desc-wrapper
+      max-width: 600px
+
+    .pic-description
+      height: 75px
+
+    .pic-rigth
+      margin-bottom: 60px
+
+    .pic-btn
+      width: 530px
+      // need refactor here
+
+@media (max-width: 634px)
+  // mobile menu
+
 @media (max-width: 842px)
   .main-wrapper-pic
     flex-direction: column
