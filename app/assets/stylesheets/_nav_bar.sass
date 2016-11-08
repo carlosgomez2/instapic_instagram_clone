@@ -82,7 +82,6 @@ nav
       height: 100vh
       visibility: visible
 
-
     .label-toggle
       background: linear-gradient(to bottom, black 0%, black 20%, transparent 20%, transparent 40%, black 40%, black 60%, transparent 60%, transparent 80%, black 80%, black 100%) //Gradient Hamburger
       cursor: pointer
@@ -92,6 +91,17 @@ nav
       margin-top: 1.3em
       margin-right: 0.7em
       width: 35px
+      &:active
+        background: linear-gradient(to bottom, gray 0%, gray 20%, transparent 20%, transparent 40%, gray 40%, gray 60%, transparent 60%, transparent 80%, gray 80%, gray 100%)
 
     .wrapper
       display: block
+
+@media (max-width: 600px)
+  .wrapper, .navBar
+    width: 100vw !important
+    margin: 0
+    padding: 0
+
+  .label-toggle
+    margin-right: 1.5em !important
