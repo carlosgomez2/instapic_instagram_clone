@@ -1,7 +1,19 @@
 <div class="pure-center">
+
   <% @pics.each do |pic| %>
-    <%= link_to (image_tag pic.image.url(:medium)), pic %>
-    <h2><%= link_to pic.title, pic %></h2>
-    <p><%= pic.description %></p>
+    <article class="article-pic">
+      <header class="header-pic">
+        <h2 class="index-title"><%= link_to pic.title, pic %></h2>
+      </header>
+      <div class="index-pic">
+        <%= link_to (image_tag pic.image.url(:medium)), pic %>
+      </div>
+      <div class="index-pic-description">
+        <p><%= pic.description %></p>
+      </div>
+    </article>
   <% end %>
+
+
+
 </div>
