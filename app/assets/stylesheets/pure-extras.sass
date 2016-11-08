@@ -1,10 +1,12 @@
 // Imports
-@import "show"
+@import "fonts"
 @import "colors"
+@import "show"
 @import "menu"
 @import "form"
 @import "buttons_extra"
 @import "nav_bar"
+
 
 // Alerts
 .pure-alert
@@ -33,6 +35,22 @@
 // Generals
 body
   background-color: $bg_color
+
+body, p
+  font-family: $Ssp
+  font-weight: 400
+  font-size: 17px
+  line-height: 1.3em
+
+h1, h2, h3, h4, h5
+  font-family: $Merry
+  font-weight: 700
+  line-height: 1.3em
+
+h6
+  font-family: $Ssp
+  font-weight: 400
+  text-transform: uppercase
 
 .main-wrapper
   width: 100%
