@@ -3,9 +3,8 @@ article
   display: flex
   align-items: stretch
   flex-direction: column
-  margin: 0
+  margin: 0 auto
   padding: 0
-  position: relative
   z-index: -1
   margin-bottom: 60px
   max-width: 602px
@@ -28,28 +27,38 @@ article
     box-sizing: border-box
     display: flex
     flex-shrink: 0
+    justify-content: space-between
     margin: 0
-    position: relative
     .index-title
       font-size: 1.1em
+      &:hover
+        cursor: pointer
+    span
+      color: #A5A7AA
+      float: right
+
   .index-pic
-    -webkit-box-align: stretch
-    -ms-flex-align: stretch
-    align-items: stretch
     border: 0 solid #000
     box-sizing: border-box
-    display: -webkit-box
-    display: -ms-flexbox
-    display: flex
+    margin: 0
+    padding: 0
+    align-items: stretch
+    -webkit-box-align: stretch
+    -ms-flex-align: stretch
     -webkit-box-orient: vertical
     -webkit-box-direction: normal
     -ms-flex-direction: column
+
+    display: flex
+    display: -webkit-box
+    display: -ms-flexbox
     flex-direction: column
     -ms-flex-negative: 0
     flex-shrink: 0
-    margin: 0
-    padding: 0
-    position: relative
+
+    img
+      width: 100% !important
+
   .index-pic-description
     font-size: 15px
     line-height: 18px

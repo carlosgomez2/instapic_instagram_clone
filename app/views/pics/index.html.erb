@@ -1,9 +1,12 @@
 <div class="pure-center">
 
+
+
   <% @pics.each do |pic| %>
     <article class="article-pic">
       <header class="header-pic">
         <h2 class="index-title"><%= link_to pic.title, pic %></h2>
+        <span><%= time_ago_in_words pic.created_at %></span>
       </header>
       <div class="index-pic">
         <%= link_to (image_tag pic.image.url(:medium)), pic %>
