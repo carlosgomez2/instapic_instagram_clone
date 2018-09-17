@@ -95,7 +95,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
-    puma (3.6.0)
+    puma (3.12.0)
     purecss-rails (0.6.0)
       railties (>= 3.2.6, < 5)
     rack (1.6.5)
@@ -181,7 +181,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 5.0.0)
-  puma
+  puma (~> 3.12)
   purecss-rails
   rails (= 4.2.6)
   sass-rails (~> 5.0, >= 5.0.6)
@@ -194,4 +194,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.1
+   1.16.3

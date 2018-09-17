@@ -17,7 +17,8 @@ gem 'purecss-rails'
 gem 'devise'
 gem "paperclip", "~> 5.0.0"
 gem 'acts_as_votable', '~> 0.10.0'
-gem 'puma'
+# gem 'puma'
+gem 'puma', '~> 3.12'
 
 group :development, :test do
   gem 'byebug'
